@@ -1,0 +1,567 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9592A723-B6D1-44B8-8673-B686A3D296BB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Optimisation_Windows_Capet</RootNamespace>
+    <AssemblyName>Optimisation Windows Capetlevrai</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publier\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Autres\photo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Autres\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v18.1" />
+    <Reference Include="DevExpress.Data.v18.1" />
+    <Reference Include="DevExpress.Dialogs.v18.1.Core, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v18.1.Core, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v18.1.Core, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v18.1.Core, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v18.1" />
+    <Reference Include="DevExpress.Sparkline.v18.1.Core" />
+    <Reference Include="DevExpress.XtraBars.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraDialogs.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.1" />
+    <Reference Include="DevExpress.Printing.v18.1.Core" />
+    <Reference Include="DevExpress.XtraGauges.v18.1.Core, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v18.1.Win, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\Accueil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\Accueil.Designer.cs">
+      <DependentUpon>Accueil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Restore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\Restore.Designer.cs">
+      <DependentUpon>Restore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\UserControl\AttenteRestore.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\UserControl\AttenteRestore.Designer.cs">
+      <DependentUpon>AttenteRestore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\UserControl\BETAFORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\UserControl\BETAFORM.Designer.cs">
+      <DependentUpon>BETAFORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\UserControl\DDUCommand.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\UserControl\DDUCommand.Designer.cs">
+      <DependentUpon>DDUCommand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Informations PC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\Informations PC.Designer.cs">
+      <DependentUpon>Informations PC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Lancement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\Lancement.Designer.cs">
+      <DependentUpon>Lancement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\PB%27s\CheckDWTMaison.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\PB%27s\CheckDWTMaison.Designer.cs">
+      <DependentUpon>CheckDWTMaison.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\EcranDeChargement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\EcranDeChargement.Designer.cs">
+      <DependentUpon>EcranDeChargement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\PB%27s\PBSon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\PB%27s\PBSon.Designer.cs">
+      <DependentUpon>PBSon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\PB%27s\PBSteam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\PB%27s\PBSteam.Designer.cs">
+      <DependentUpon>PBSteam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\PB%27s\PBCrashFortnite.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\PB%27s\PBCrashFortnite.Designer.cs">
+      <DependentUpon>PBCrashFortnite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\PB%27s\PBPhoto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\PB%27s\PBPhoto.Designer.cs">
+      <DependentUpon>PBPhoto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\PB%27s\PBClavierLumLaptop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\PB%27s\PBClavierLumLaptop.Designer.cs">
+      <DependentUpon>PBClavierLumLaptop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\PB%27s\PBPerduFichierDoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\PB%27s\PBPerduFichierDoc.Designer.cs">
+      <DependentUpon>PBPerduFichierDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\PB%27s\PBLenteur.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\PB%27s\PBLenteur.Designer.cs">
+      <DependentUpon>PBLenteur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\PB%27s\PBMicroCam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\PB%27s\PBMicroCam.Designer.cs">
+      <DependentUpon>PBMicroCam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\PB%27s\PBsChauffe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\PB%27s\PBsChauffe.Designer.cs">
+      <DependentUpon>PBsChauffe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\PB%27s\PBsEcranBleu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\PB%27s\PBsEcranBleu.Designer.cs">
+      <DependentUpon>PBsEcranBleu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\PB%27s\RevertControler.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\PB%27s\RevertControler.Designer.cs">
+      <DependentUpon>RevertControler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\UserControl\Infos\P1\Dis USB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\UserControl\Infos\P1\Dis USB.Designer.cs">
+      <DependentUpon>Dis USB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\UserControl\Infos\P1\Désac Prog Dem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\UserControl\Infos\P1\Désac Prog Dem.Designer.cs">
+      <DependentUpon>Désac Prog Dem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\UserControl\Infos\P1\Désac Serv Dem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\UserControl\Infos\P1\Désac Serv Dem.Designer.cs">
+      <DependentUpon>Désac Serv Dem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\UserControl\Infos\P1\Supp Prefetch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\UserControl\Infos\P1\Supp Prefetch.Designer.cs">
+      <DependentUpon>Supp Prefetch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\UserControl\Infos\P2\DesacProg.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\UserControl\Infos\P2\DesacProg.Designer.cs">
+      <DependentUpon>DesacProg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\UserControl\Infos\P2\DésacWinDef.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\UserControl\Infos\P2\DésacWinDef.Designer.cs">
+      <DependentUpon>DésacWinDef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\UserControl\Infos\P2\EffetVisu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\UserControl\Infos\P2\EffetVisu.Designer.cs">
+      <DependentUpon>EffetVisu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\UserControl\Infos\P2\F8Veille.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\UserControl\Infos\P2\F8Veille.Designer.cs">
+      <DependentUpon>F8Veille.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\UserControl\Infos\P2\OptiDem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\UserControl\Infos\P2\OptiDem.Designer.cs">
+      <DependentUpon>OptiDem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\UserControl\Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\UserControl\Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\UserControl\SelectLang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\UserControl\SelectLang.Designer.cs">
+      <DependentUpon>SelectLang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\UserControl\Infos\P1\Supp Temp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\UserControl\Infos\P1\Supp Temp.Designer.cs">
+      <DependentUpon>Supp Temp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\UserControl\Download Driver.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\UserControl\Download Driver.Designer.cs">
+      <DependentUpon>Download Driver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\UserControl\WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\UserControl\WaitForm1.Designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GIF\GIFRegEffetsVisu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GIF\GIFRegEffetsVisu.Designer.cs">
+      <DependentUpon>GIFRegEffetsVisu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Infos\Infos Partie2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Infos\Infos Partie2.Designer.cs">
+      <DependentUpon>Infos Partie2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Infos\Infos Partie1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Infos\Infos Partie1.Designer.cs">
+      <DependentUpon>Infos Partie1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\PB%27s\PBEcranNoir.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\PB%27s\PBEcranNoir.Designer.cs">
+      <DependentUpon>PBEcranNoir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Autres\Program.cs" />
+    <Compile Include="Base\PB%27s\RevertImage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\PB%27s\RevertImage.Designer.cs">
+      <DependentUpon>RevertImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\PB%27s\TweetPBEcranBleu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\PB%27s\TweetPBEcranBleu.Designer.cs">
+      <DependentUpon>TweetPBEcranBleu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Base\Accueil.resx">
+      <DependentUpon>Accueil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\Restore.resx">
+      <DependentUpon>Restore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\UserControl\AttenteRestore.resx">
+      <DependentUpon>AttenteRestore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\UserControl\BETAFORM.resx">
+      <DependentUpon>BETAFORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\UserControl\DDUCommand.resx">
+      <DependentUpon>DDUCommand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\Informations PC.resx">
+      <DependentUpon>Informations PC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\Lancement.resx">
+      <DependentUpon>Lancement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\PB%27s\CheckDWTMaison.resx">
+      <DependentUpon>CheckDWTMaison.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\EcranDeChargement.resx">
+      <DependentUpon>EcranDeChargement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\PB%27s\PBSon.resx">
+      <DependentUpon>PBSon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\PB%27s\PBSteam.resx">
+      <DependentUpon>PBSteam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\PB%27s\PBCrashFortnite.resx">
+      <DependentUpon>PBCrashFortnite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\PB%27s\PBPhoto.resx">
+      <DependentUpon>PBPhoto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\PB%27s\PBClavierLumLaptop.resx">
+      <DependentUpon>PBClavierLumLaptop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\PB%27s\PBPerduFichierDoc.resx">
+      <DependentUpon>PBPerduFichierDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\PB%27s\PBLenteur.resx">
+      <DependentUpon>PBLenteur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\PB%27s\PBMicroCam.resx">
+      <DependentUpon>PBMicroCam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\PB%27s\PBsChauffe.resx">
+      <DependentUpon>PBsChauffe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\PB%27s\RevertControler.resx">
+      <DependentUpon>RevertControler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\UserControl\Infos\P1\Dis USB.resx">
+      <DependentUpon>Dis USB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\UserControl\Infos\P1\Désac Prog Dem.resx">
+      <DependentUpon>Désac Prog Dem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\UserControl\Infos\P1\Désac Serv Dem.resx">
+      <DependentUpon>Désac Serv Dem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\UserControl\Infos\P1\Supp Prefetch.resx">
+      <DependentUpon>Supp Prefetch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\UserControl\Infos\P2\DesacProg.resx">
+      <DependentUpon>DesacProg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\UserControl\Infos\P2\DésacWinDef.resx">
+      <DependentUpon>DésacWinDef.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\UserControl\Infos\P2\EffetVisu.resx">
+      <DependentUpon>EffetVisu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\UserControl\Infos\P2\F8Veille.resx">
+      <DependentUpon>F8Veille.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\UserControl\Infos\P2\OptiDem.resx">
+      <DependentUpon>OptiDem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\UserControl\Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\UserControl\SelectLang.resx">
+      <DependentUpon>SelectLang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\UserControl\Infos\P1\Supp Temp.resx">
+      <DependentUpon>Supp Temp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\UserControl\Download Driver.resx">
+      <DependentUpon>Download Driver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\UserControl\WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GIF\GIFRegEffetsVisu.resx">
+      <DependentUpon>GIFRegEffetsVisu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Infos\Infos Partie2.resx">
+      <DependentUpon>Infos Partie2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Infos\Infos Partie1.resx">
+      <DependentUpon>Infos Partie1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\PB%27s\PBEcranNoir.resx">
+      <DependentUpon>PBEcranNoir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\PB%27s\PBsEcranBleu.resx">
+      <DependentUpon>PBsEcranBleu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\PB%27s\RevertImage.resx">
+      <DependentUpon>RevertImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\PB%27s\TweetPBEcranBleu.resx">
+      <DependentUpon>TweetPBEcranBleu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Autres\app.config" />
+    <None Include="Autres\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\classroot.cfg" />
+    <None Include="Resources\clsidleftover.cfg" />
+    <None Include="Resources\DDU.zip" />
+    <None Include="Resources\Display Driver Uninstaller.exe.config" />
+    <None Include="Resources\driverfiles.cfg" />
+    <None Include="Resources\Guru3D.com.zip" />
+    <None Include="Resources\interface.cfg" />
+    <None Include="Resources\NVIDIAINSPECTOR.zip" />
+    <None Include="Resources\packages.cfg" />
+    <None Include="Resources\services.cfg" />
+    <None Include="Resources\UserPreferencesMask.reg" />
+    <None Include="Resources\WinRing0.sys" />
+    <None Include="Resources\WinRing0x64.sys" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Autres\photo.ico" />
+    <None Include="Resources\TinyNvidiaUpdateChecker.exe" />
+    <None Include="Resources\SettingsFR.xml" />
+    <None Include="Resources\SettingsEN.xml" />
+    <None Include="Resources\paexec.exe" />
+    <None Include="Resources\Display Driver Uninstaller.pdb" />
+    <None Include="Resources\Display Driver Uninstaller.exe" />
+    <None Include="Resources\HtmlAgilityPack.dll" />
+    <None Include="Resources\Screenshot_1.png" />
+    <None Include="Resources\giphy.gif" />
+    <None Include="Resources\800400p6686EDNmainarrow_outline_red_up.png" />
+    <None Include="Resources\UserPreferencesMask.txt" />
+    <None Include="Resources\SteamSetup.exe" />
+    <None Include="Resources\Clavier lumineux asus.png" />
+    <None Include="Resources\HWMonitor_x64.exe" />
+    <None Include="Resources\Revert.png" />
+    <None Include="Resources\Screenshot_4.png" />
+    <None Include="Resources\hqdefault.jpg" />
+    <None Include="Resources\photo %281%29.jpg" />
+    <None Include="Resources\photo.jpg" />
+    <None Include="Resources\DisableWinTracking.exe" />
+    <None Include="Resources\WinRing0x64.dll" />
+    <None Include="Resources\WinRing0.dll" />
+    <None Include="Resources\ThrottleStop.exe" />
+    <None Include="Resources\Info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WbemScripting">
+      <Guid>{565783C6-CB41-11D1-8B02-00600806D9B6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 et x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
