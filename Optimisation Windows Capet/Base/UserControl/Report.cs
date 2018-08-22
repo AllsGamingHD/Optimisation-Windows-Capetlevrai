@@ -28,11 +28,11 @@ namespace Optimisation_Windows_Capet.Base.UserControl
             Random aleatoire = new Random();
             int entier = aleatoire.Next(); //Génère un entier aléatoire positif
             string name = ("report_" + entier + ".txt");
-            FtpWebRequest request = (FtpWebRequest)WebRequest.Create("ftp://ftp.lossantoscityfr.esy.es/report/" + name);
+            FtpWebRequest request = (FtpWebRequest)WebRequest.Create("FTP CIBLE" + name);
             request.Method = WebRequestMethods.Ftp.UploadFile;
 
             // This example assumes the FTP site uses anonymous logon.
-            request.Credentials = new NetworkCredential("u585647664.admin", "azertyuiop02");
+            request.Credentials = new NetworkCredential("FTP USER", "FTP PASS");
 
             // Copy the contents of the file to the request stream.
             byte[] fileContents = Encoding.UTF8.GetBytes(Properties.Settings.Default.chatReport);
